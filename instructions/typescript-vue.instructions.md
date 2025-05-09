@@ -1,15 +1,21 @@
 ---
-applyTo: "**/*.ts,**/*.vue"
+applyTo: "**.ts,**/*.vue"
 ---
 # Project Coding Standards for TypeScript and Vue
 
 Apply the [general coding guidelines](./general-coding.instructions.md) to all code.
 
+## Naming Conventions
+
+- Use kebab-case for file names (e.g., `my-component.ts`)
+- Use camelCase for variables and function names (e.g., `myVariable`, `myFunction()`)
+- Use PascalCase for classes, types, and interfaces (e.g., `MyClass`, `MyInterface`)
+- Use ALL_CAPS for constants and enum values (e.g., `MAX_COUNT`, `Color.RED`)
+
 ## TypeScript Guidelines
 
-- Use TypeScript for all new code
 - Follow functional programming principles where appropriate (e.g., pure functions, higher-order functions, immutability)
-- Leverage modern TypeScript and JavaScript features (e.g. optional operator, nullish coalescing, and `satisfies` operator)
+- Leverage modern TypeScript and JavaScript features (e.g., optional operator, nullish coalescing, and `satisfies` operator)
 - Prefer top-level `import type` over inline `import { type ... }`
 - Always prefer interfaces when modelling inheritance (only use the `&` operator where `interface extends` is not possible)
 - Prefer immutable data (e.g., `const` declarations, `readonly` properties)
@@ -19,12 +25,8 @@ Apply the [general coding guidelines](./general-coding.instructions.md) to all c
 ## Vue & Nuxt Guidelines
 
 - Use Nuxt's auto-imports instead of manual imports (e.g., components, composables)
-- Prefer built-in Nuxt composables (e.g. `navigateTo`, `useState`, `useFetch`, `useAsyncData`)
+- Prefer built-in Nuxt composables (e.g., `navigateTo`, `useState`, `useFetch`, `useAsyncData`)
 - Prefer `$fetch` over plain `fetch` for data fetching
-
-# Comments Guidelines
-
-- Be concise in comments, and only add comments when the code is not self-explanatory
 
 ## JSDoc Comments Guidelines
 
